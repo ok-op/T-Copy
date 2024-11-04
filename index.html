@@ -118,7 +118,7 @@
             fetch('message.txt') // আপনার টেক্সট ফাইলের নাম
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("messageBox").innerText = data;
+                    document.getElementById("messageBox").innerHTML = data; // innerText থেকে innerHTML পরিবর্তন করা হয়েছে
                 })
                 .catch(error => console.error('Error loading message:', error));
         }
