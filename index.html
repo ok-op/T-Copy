@@ -7,13 +7,16 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 50px;
-            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* পেজের উচ্চতা সম্পূর্ণ পরিমাণে নিতে */
         }
         #messageBox {
             border: 2px solid #000; /* বর্ডার কালার ও সাইজ */
             padding: 20px;
-            margin-bottom: 20px;
+            margin: 20px auto;
             font-size: 20px;
             display: inline-block; /* বক্সের সাইজ ঠিক রাখতে */
         }
@@ -23,19 +26,38 @@
             cursor: pointer;
         }
         footer {
-            margin-top: 20px;
+            margin-top: auto; /* ফুটার নিচে ফিক্স করতে */
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-top: 2px solid #000; /* ফুটারের উপরে বর্ডার */
+            text-align: center;
             font-size: 14px;
         }
         img {
             width: 100px; /* লোগোর সাইজ */
             height: auto;
+            margin: 20px auto; /* লোগোর জন্য মার্জিন */
+            display: block; /* লোগো সেন্টার করতে */
         }
     </style>
 </head>
 <body>
 
-    <img src="https://i.imgur.com/oFuKfaG.png" alt="Logo"> <!-- এখানে লোগোর URL দিন -->
-    <div id="messageBox">হ্যালো এভরিওয়ান আপ লোক ক্যাসে হো</div>
+    <img src="https://via.placeholder.com/100" alt="Logo"> <!-- এখানে লোগোর URL দিন -->
+    <div id="messageBox"><div class="navbar">
+        <a href="#">Home</a>
+        <a href="https://t.me/Opleech/3452">News</a>
+        <div class="dropdown">
+            <button class="dropbtn">Telegram
+                <i class="fa fa-caret-down"></i>
+            </button>
+    <div class="dropdown-content">
+      <a href="https://t.me/Opleech_WD">New Channel</a>
+      <a href="https://t.me/Opleech">OLD Channel</a>
+      <a href="https://t.me/+XfmrBSzTyRFlZTI9">WD Topic Group</a>
+    </div>
+  </div>
+    </div></div>
     <button id="copyButton">কপি কিবোর্ড</button>
 
     <script>
