@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কপি মেসেজ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+        #message {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        #copyButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="message">হ্যালো এভরিওয়ান আপ লোক ক্যাসে হো</div>
+    <button id="copyButton">কপি কিবোর্ড</button>
+
+    <script>
+        document.getElementById("copyButton").onclick = function() {
+            // মেসেজটি কপি করার জন্য একটি টেক্সট এলিমেন্ট তৈরি করা
+            const message = document.getElementById("message").innerText;
+            navigator.clipboard.writeText(message).then(function() {
+                alert("মেসেজটি কপি হয়েছে!");
+            }, function(err) {
+                console.error('কপি করতে সমস্যা হয়েছে:', err);
+            });
+        };
+    </script>
+
+</body>
+</html>
