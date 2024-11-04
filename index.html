@@ -67,8 +67,11 @@
             border: 2px solid #000; /* বর্ডার কালার ও সাইজ */
             padding: 20px;
             margin: 20px auto;
-            font-size: 20px;
+            font-size: 16px;
+            white-space: pre; /* লাইনের ফরম্যাটিং বজায় রাখতে */
             display: inline-block; /* বক্সের সাইজ ঠিক রাখতে */
+            overflow-x: auto; /* এক্সট্রা লং লাইন হলে স্ক্রল হবে */
+            background-color: #f9f9f9; /* ব্যাকগ্রাউন্ড কালার */
         }
         #copyButton {
             padding: 10px 20px;
@@ -108,7 +111,7 @@
         </div>
     </div>
 
-    <img src="https://i.imgur.com/oFuKfaG.png" alt="Logo"> <!-- এখানে লোগোর URL দিন -->
+    <img src="https://via.placeholder.com/100" alt="Logo"> <!-- এখানে লোগোর URL দিন -->
     <div id="messageBox">মেসেজ এখানে আসবে...</div>
     <button id="copyButton">কপি কিবোর্ড</button>
 
@@ -118,7 +121,7 @@
             fetch('message.txt') // আপনার টেক্সট ফাইলের নাম
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("messageBox").innerHTML = data; // innerText থেকে innerHTML পরিবর্তন করা হয়েছে
+                    document.getElementById("messageBox").innerText = data; // innerHTML পরিবর্তন করে innerText ব্যবহার করা হয়েছে
                 })
                 .catch(error => console.error('Error loading message:', error));
         }
