@@ -1,6 +1,5 @@
 <header>
-        <img src="https://i.imgur.com/JIgoU6J.png" alt="Logo" class="logo">
+    <img src="https://i.imgur.com/JIgoU6J.png" alt="Logo" class="logo">
         <h1 class="title">𝐄𝐧𝐜𝐨𝐝𝐞𝐫 & 𝐃𝐞𝐜𝐨𝐝𝐞𝐫</h1>
-    </header>
+</header>
 
- <br>
