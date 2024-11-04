@@ -121,13 +121,13 @@
             fetch('message.txt') // আপনার টেক্সট ফাইলের নাম
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById("messageBox").innerText = data; // innerText পরিবর্তন করে
+                    document.getElementById("messageBox").innerHTML = data; // innerHTML ব্যবহার করুন
                 })
                 .catch(error => console.error('Error loading message:', error));
         }
 
         document.getElementById("copyButton").onclick = function() {
-            const message = document.getElementById("messageBox").innerText;
+            const message = document.getElementById("messageBox").innerHTML; // HTML কপি করুন
             navigator.clipboard.writeText(message).then(function() {
                 alert("মেসেজটি কপি হয়েছে!");
             }, function(err) {
