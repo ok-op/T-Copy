@@ -10,26 +10,37 @@
             margin: 50px;
             text-align: center;
         }
-        #message {
+        #messageBox {
+            border: 2px solid #000; /* বর্ডার কালার ও সাইজ */
+            padding: 20px;
             margin-bottom: 20px;
             font-size: 20px;
+            display: inline-block; /* বক্সের সাইজ ঠিক রাখতে */
         }
         #copyButton {
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
         }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        img {
+            width: 100px; /* লোগোর সাইজ */
+            height: auto;
+        }
     </style>
 </head>
 <body>
 
-    <div id="message">হ্যালো এভরিওয়ান আপ লোক ক্যাসে হো</div>
+    <img src="https://via.placeholder.com/100" alt="Logo"> <!-- এখানে লোগোর URL দিন -->
+    <div id="messageBox">হ্যালো এভরিওয়ান আপ লোক ক্যাসে হো</div>
     <button id="copyButton">কপি কিবোর্ড</button>
 
     <script>
         document.getElementById("copyButton").onclick = function() {
-            // মেসেজটি কপি করার জন্য একটি টেক্সট এলিমেন্ট তৈরি করা
-            const message = document.getElementById("message").innerText;
+            const message = document.getElementById("messageBox").innerText;
             navigator.clipboard.writeText(message).then(function() {
                 alert("মেসেজটি কপি হয়েছে!");
             }, function(err) {
@@ -37,6 +48,11 @@
             });
         };
     </script>
+
+    <footer>
+        Copyright ©️ By copy message<br>
+        <a href="https://t.me/Opleech_WD" target="_blank">❤️ Channel ❤️</a>
+    </footer>
 
 </body>
 </html>
